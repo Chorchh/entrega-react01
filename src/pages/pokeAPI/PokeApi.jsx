@@ -5,10 +5,9 @@ const PokeApi = () => {
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("https://pokeapi.co/api/v2/pokemon")
+    axios.get("https://pokeapi.co/api/v2/pokemon")
       .then((res) => {
-        setPokemon(res.data.results);
+        setPokemon(res.data.pokemon);
   })
   .catch((err) => 
     console.log(err));
@@ -17,16 +16,8 @@ const PokeApi = () => {
   return (
     <>
       <h2 style={{textAlign: "center"}}>El Pokemon</h2>
-      <div>
-        <div key={pokemon.map((pokemones) => {
-          <div key={pokemones.name}>{pokemones.name}
-            console.log(pokemon)
-          </div>
 
-        })}></div>
-
-      </div>
-
+    <p>{pokemon}</p>
     </>
   )
 }
