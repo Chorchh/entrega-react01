@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: #131415;
     display: flex;
@@ -29,6 +29,7 @@ export const ToDoInput = styled.input`
     display: flex;
     border-radius: 10px;
     font-family: sans-serif;
+    padding: 10px;
 `
 
 export const ToDoBtn = styled.button`
@@ -60,4 +61,7 @@ export const ItemTask = styled.li`
     align-items: center;
     text-align: center;
     gap: 10px;
+    border: 2px solid orange;
+    padding: 10px 30px;
+    border-radius: 10px;
 `
